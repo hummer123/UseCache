@@ -1,6 +1,6 @@
 CC := gcc
 CFLAGS := -g -W -Wall
-PROGNAME := tcpsend tcprecv tcpselectrecv
+PROGNAME := tcpsend tcprecv tcpselectrecv tcpooblinerecv tcpinterruptrecv
 
 all : $(PROGNAME)
 
@@ -11,6 +11,12 @@ tcprecv: tcprecv.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 tcpselectrecv: tcpselectrecv.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+tcpooblinerecv: tcpooblinerecv.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+tcpinterruptrecv: tcpinterruptrecv.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 
